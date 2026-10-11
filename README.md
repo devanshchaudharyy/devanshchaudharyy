@@ -134,10 +134,6 @@ My focus is connecting the interface to real API and database behavior, with aut
 </p>
 
 <p align="center">
-  <b>Watch the snake eat my contributions</b>
-</p>
-
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/contribution-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="assets/contribution-snake.svg" />
