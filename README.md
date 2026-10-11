@@ -134,8 +134,18 @@ My focus is connecting the interface to real API and database behavior, with aut
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph-gold-gamma.vercel.app/graph?username=devanshchaudharyy&amp;bg_color=111c2e&amp;color=c4d2e8&amp;line=55e6d2&amp;point=7c9fff&amp;area=true&amp;area_color=55e6d2&amp;hide_border=true&amp;radius=12&amp;custom_title=Building%20in%20public" width="100%" alt="Devansh's recent GitHub contribution activity" />
+  <b>Watch the snake eat my contributions</b>
 </p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="assets/contribution-snake.svg" />
+    <img src="assets/contribution-snake.svg" width="100%" alt="Animated snake eating Devansh's GitHub contribution grid" />
+  </picture>
+</p>
+
+<p align="center"><sub>Generated from my GitHub contribution grid · Refreshed daily · Light and dark themes</sub></p>
 
 <p align="center"><sub>Language charts reflect repository code, including tooling; they aren't a measure of proficiency.</sub></p>
 
