@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="88" viewBox="0 0 1200 88" role="img" aria-labelledby="title">
+  <title id="title">Let's build something useful.</title>
+  <defs><linearGradient id="a"><stop stop-color="#55e6d2"/><stop offset="1" stop-color="#7c9fff"/></linearGradient></defs>
+  <rect width="1200" height="88" rx="12" fill="#0c1524"/>
+  <rect x="0" y="0" width="1200" height="2" fill="url(#a)"/>
+  <text x="36" y="52" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" fill="#e8f0fc">Let's build something useful.</text>
+  <text x="1164" y="51" text-anchor="end" font-family="Consolas, monospace" font-size="15" fill="#87a2c5">devanshchaudharyy / keep building</text>
+</svg>
