@@ -141,9 +141,7 @@ My focus is connecting the interface to real API and database behavior, with aut
   </picture>
 </p>
 
-<p align="center"><sub>Generated from my GitHub contribution grid · Refreshed daily · Light and dark themes</sub></p>
 
-<p align="center"><sub>Language charts reflect repository code, including tooling; they aren't a measure of proficiency.</sub></p>
 
 ## Let's connect
 
