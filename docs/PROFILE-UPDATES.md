@@ -5,6 +5,7 @@ The profile cards are generated directly from GitHub's GraphQL API by
 by `.github/workflows/profile-snake.yml`, scheduled at minute 17 of every hour.
 GitHub schedules are best effort and may start late. To refresh on demand, open
 the **Refresh profile activity** workflow in Actions and select **Run workflow**.
+Edits to the README, generator script or workflow also trigger a refresh.
 
 The cards show their actual generation time in UTC. Commits, pull requests and
 profile contributions cover the previous 365 days. Stars and language byte
@@ -22,9 +23,9 @@ qualifying contributions. Commits must use an email linked to the account and
 be on a qualifying branch. The snake follows the contribution calendar
 available to its repository-scoped token.
 
-The generator has read-only permissions. A separate publishing job can write
-only the four explicitly staged SVG paths; it executes no third-party snake
-generator. Generated images are served from this repository. GitHub and the
+The generator has read-only permissions. A separate publishing job has
+repository contents-write permission and stages only the four named SVG paths;
+it executes no third-party snake generator. Generated images are served from this repository. GitHub and the
 browser may briefly cache an image after a successful refresh.
 
 References:

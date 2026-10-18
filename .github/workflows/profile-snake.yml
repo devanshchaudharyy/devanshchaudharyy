@@ -7,6 +7,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'README.md'
       - '.github/workflows/profile-snake.yml'
       - 'scripts/update_profile.py'
 

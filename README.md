@@ -129,8 +129,8 @@ My focus is connecting the interface to real API and database behavior, with aut
 ## GitHub activity
 
 <p align="center">
-  <img src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=devanshchaudharyy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=111c2e&amp;title_color=55e6d2&amp;icon_color=7c9fff&amp;text_color=c4d2e8&amp;border_radius=12&amp;rank_icon=github" width="56%" alt="Devansh's GitHub statistics" />
-  <img src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=devanshchaudharyy&amp;layout=compact&amp;hide_border=true&amp;bg_color=111c2e&amp;title_color=55e6d2&amp;text_color=c4d2e8&amp;border_radius=12&amp;langs_count=6" width="40%" alt="Languages used across public repositories" />
+  <a href="https://github.com/devanshchaudharyy?tab=overview"><img src="assets/profile-stats.svg" width="56%" alt="Devansh's public commits and profile contributions, with last refresh time" /></a>
+  <a href="https://github.com/devanshchaudharyy?tab=repositories"><img src="assets/top-languages.svg" width="40%" alt="Languages used across public repositories, with last refresh time" /></a>
 </p>
 
 <p align="center">
