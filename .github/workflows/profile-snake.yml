@@ -1,13 +1,14 @@
-name: Refresh contribution snake
+name: Refresh profile activity
 
 on:
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - '.github/workflows/profile-snake.yml'
+      - 'scripts/update_profile.py'
 
 permissions:
   contents: read
@@ -21,6 +22,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Check out profile generator
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Generate cards directly from GitHub
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_profile.py
+
       - name: Generate contribution snake animations
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         with:
@@ -29,11 +41,14 @@ jobs:
             assets/contribution-snake.svg?color_snake=#536dfe&color_dots=#ebedf0,#b5ece2,#79d9c6,#3ab99f,#168e7a
             assets/contribution-snake-dark.svg?palette=github-dark&color_snake=#7c9fff&color_dots=#172437,#164a4b,#247d76,#38b3a0,#55e6d2
 
-      - name: Pass animations to the publishing job
+      - name: Pass generated profile assets to the publishing job
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: contribution-snake
-          path: assets/contribution-snake*.svg
+          path: |
+            assets/contribution-snake*.svg
+            assets/profile-stats.svg
+            assets/top-languages.svg
           if-no-files-found: error
           retention-days: 1
 
@@ -56,15 +71,15 @@ jobs:
           name: contribution-snake
           path: assets
 
-      - name: Save refreshed animations
+      - name: Save refreshed profile assets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/contribution-snake.svg assets/contribution-snake-dark.svg
+          git add assets/contribution-snake.svg assets/contribution-snake-dark.svg assets/profile-stats.svg assets/top-languages.svg
           if git diff --cached --quiet; then
-            echo 'Contribution animations are already current.'
+            echo 'Profile assets are already current.'
             exit 0
           fi
-          git commit -m 'Refresh contribution snake animations [skip ci]'
+          git commit -m 'Refresh profile activity assets [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
